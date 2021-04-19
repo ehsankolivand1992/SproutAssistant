@@ -51,6 +51,9 @@ dependencies {
     implementation Libs.Roomigrant.library
     kapt Libs.Roomigrant.compiler
 
+    implementation Libs.AndroidX.Compose.livedata
+
+
     testImplementation Libs.AndroidX.Room.testing
 
 

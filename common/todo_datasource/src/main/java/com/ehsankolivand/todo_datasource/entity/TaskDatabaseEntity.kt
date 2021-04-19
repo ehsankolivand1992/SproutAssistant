@@ -5,10 +5,11 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.ehsankolivand.constants.Constants
+import java.util.*
 
 
 @Entity
-class Task(
+data class TaskDatabaseEntity(
     @field:ColumnInfo(name = "Name") val name: String?,
     /** Work duration, in minutes.  */
     @field:ColumnInfo(name = "WorkDuration") val workDuration: Int,
@@ -23,7 +24,13 @@ class Task(
     ) val isDND: Boolean,
     @field:ColumnInfo(name = "KeepDNDOnBreaks") val isKeepDNDOnBreaks: Boolean,
     @field:ColumnInfo(name = "WiFi") val isWiFi: Boolean,
-    @field:ColumnInfo(name = "showInStatistics") val isShowInStatistics: Boolean
+    @field:ColumnInfo(name = "is_done") val isDone: Boolean,
+    @field:ColumnInfo(name = "showInStatistics") val isShowInStatistics: Boolean,
+    @field:ColumnInfo(name = "date") val date: Date
+
+
+
+
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "ID")
@@ -40,7 +47,9 @@ class Task(
         false,
         false,
         false,
-        true
+        false,
+        true,
+        Date()
     ) {
     }
 

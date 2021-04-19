@@ -1,43 +1,30 @@
 package com.ehsankolivand.todo_datasource.Daos
 
+import com.ehsankolivand.datasource.BaseDao
+import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Transaction
-import androidx.room.Update
-import com.ehsankolivand.todo_datasource.entity.Task
-
-abstract class TaskDao<in E:Task > {
-    @Insert
-    abstract suspend fun insert(entity: E): Long
-
-    @Insert
-    abstract suspend fun insertAll(vararg entity: E)
-
-    @Insert
-    abstract suspend fun insertAll(entities: List<E>)
-
-    @Update
-    abstract suspend fun update(entity: E)
-
-    @Delete
-    abstract suspend fun deleteEntity(entity: E): Int
-
-    @Transaction
-    open suspend fun withTransaction(tx: suspend () -> Unit) = tx()
-
-    suspend fun insertOrUpdate(entity: E): Long {
-        return if (entity.id == 0L) {
-            insert(entity)
-        } else {
-            update(entity)
-            entity.id
-        }
+class TaskDao:BaseDao<TaskDatabaseEntity>() {
+    override suspend fun insert(entity: TaskDatabaseEntity): Long {
+        TODO("Not yet implemented")
     }
 
-    @Transaction
-    open suspend fun insertOrUpdate(entities: List<E>) {
-        entities.forEach {
-        }
+    override suspend fun insertAll(vararg entity: TaskDatabaseEntity) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun insertAll(entities: List<TaskDatabaseEntity>) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun update(entity: TaskDatabaseEntity) {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteEntity(entity: TaskDatabaseEntity): Int {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun InsertOrupdate(entity: TaskDatabaseEntity) {
+        TODO("Not yet implemented")
     }
 }
