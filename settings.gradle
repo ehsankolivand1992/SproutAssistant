@@ -3,10 +3,17 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "Sprout Assistant"
 include ':app'
 
 include ':feature'
+include ':feature:todo'
+
+
+include 'common'
+
+include 'library'
+
+
