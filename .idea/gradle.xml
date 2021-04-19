@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/todo" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/library/constants" />
             <option value="$PROJECT_DIR$/library/datasource" />
           </set>
         </option>
