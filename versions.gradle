@@ -29,13 +29,45 @@ versions.roomVersion = '2.2.5'
 libs.room = [
         "ktx" : "androidx.room:room-ktx:$versions.roomVersion",
         "compiler":"androidx.room:room-compiler:$versions.roomVersion",
-        "test" : "androidx.room:room-testing:$versions.roomVersion"
+        "test" : "androidx.room:room-testing:$versions.roomVersion",
+        "runtime":"androidx.room:room-runtime:$versions.roomVersion"
 ]
 
-versions.jetbrains = '1.5.0-RC'
+versions.jetbrains = '1.4.32'
+versions.jetbrains7 = '1.5.0-RC'
+
 libs.jetbrains = [
-        "jetbrains": "org.jetbrains.kotlin:kotlin-stdlib-jdk8$versions.jetbrains"
+        "jetbrains": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.jetbrains",
+        "jetbrains7": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.jetbrains7"
 ]
+
+versions.androidx_ktx = '1.3.2'
+
+versions.appcompat = '1.2.0'
+
+libs.androidx =[
+        "ktx" :   "androidx.core:core-ktx:$versions.androidx_ktx"   ,
+        "appcompat" : "androidx.appcompat:appcompat:$versions.appcompat"
+]
+
+versions.material ='1.3.0'
+libs.material = [
+        "material" : "com.google.android.material:material:$versions.material"
+]
+versions.junit = '4.13.2'
+libs.junit =[
+        "junit" : "junit:junit:$versions.junit"
+]
+
+versions.androidx_test = "1.1.2"
+versions.espresso = "3.3.0"
+
+libs.androidx_test = [
+        "junitx" : "androidx.test.ext:junit:$versions.androidx_test",
+        "espresso" : "androidx.test.espresso:espresso-core:$versions.espresso"
+
+]
+
 
 /*
 

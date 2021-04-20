@@ -7,7 +7,7 @@ import androidx.room.*
 abstract class BaseDao<T> {
 
     @Insert
-    abstract suspend fun insert(entity: T): Long
+    abstract  fun insert(entity: T): Long
 
     @Insert
     abstract suspend fun insertAll(vararg entity: T)
