@@ -1,4 +1,4 @@
-package com.ehsankolivand.datasource
+package com.ehsankolivand.datasource.daos_struc
 
 
 import androidx.room.*

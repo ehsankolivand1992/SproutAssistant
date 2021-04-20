@@ -1,4 +1,4 @@
-package com.ehsankolivand.datasource
+package com.ehsankolivand.datasource.io
 
 interface Deletable<I> {
 

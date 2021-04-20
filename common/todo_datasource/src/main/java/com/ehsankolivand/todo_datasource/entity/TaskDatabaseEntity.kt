@@ -1,3 +1,4 @@
+/*
 package com.ehsankolivand.todo_datasource.entity
 
 import androidx.room.ColumnInfo
@@ -11,12 +12,18 @@ import java.util.*
 @Entity
 data class TaskDatabaseEntity(
     @field:ColumnInfo(name = "Name") val name: String?,
-    /** Work duration, in minutes.  */
+    */
+/** Work duration, in minutes.  *//*
+
     @field:ColumnInfo(name = "WorkDuration") val workDuration: Int,
-    /** Break duration, in minutes.  */
+    */
+/** Break duration, in minutes.  *//*
+
     @field:ColumnInfo(name = "BreakDuration") val breakDuration: Int,
     @field:ColumnInfo(name = "LongBreaks") val isLongBreaks: Boolean,
-    /** Long break duration, in minutes.  */
+    */
+/** Long break duration, in minutes.  *//*
+
     @field:ColumnInfo(name = "LongBreakDuration") val longBreakDuration: Int,
     @field:ColumnInfo(name = "SessionsBeforeLongBreak") val sessionsBeforeLongBreak: Int,
     @field:ColumnInfo(
@@ -26,7 +33,6 @@ data class TaskDatabaseEntity(
     @field:ColumnInfo(name = "WiFi") val isWiFi: Boolean,
     @field:ColumnInfo(name = "is_done") val isDone: Boolean,
     @field:ColumnInfo(name = "showInStatistics") val isShowInStatistics: Boolean,
-    @field:ColumnInfo(name = "date") val date: Date
 
 
 
@@ -48,9 +54,9 @@ data class TaskDatabaseEntity(
         false,
         false,
         false,
-        true,
-        Date()
+        true
     ) {
     }
 
 }
+*/

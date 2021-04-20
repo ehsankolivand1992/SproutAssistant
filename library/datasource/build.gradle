@@ -19,7 +19,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -39,15 +39,9 @@ android {
 }
 
 dependencies {
-
-
-    api Libs.AndroidX.Room.runtime
-    implementation Libs.AndroidX.Room.ktx
-    kapt Libs.AndroidX.Room.compiler
-    implementation Libs.Roomigrant.library
-    kapt Libs.Roomigrant.compiler
-
-    testImplementation Libs.AndroidX.Room.testing
-
+    implementation Libs.room.ktx
+    implementation Libs.jetbrains.jetbrains
+    kapt Libs.room.compiler
+    androidTestImplementation  Libs.room.test
 
 }
