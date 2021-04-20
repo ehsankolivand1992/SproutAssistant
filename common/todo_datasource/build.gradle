@@ -47,6 +47,8 @@ dependencies {
 
      implementation 'androidx.room:room-runtime:2.3.0-rc01'
 
+
+
      testImplementation Libs.junit.junit
 
      androidTestImplementation Libs.androidx_test.junitx
@@ -54,7 +56,7 @@ dependencies {
      implementation Libs.room.ktx
      implementation Libs.room.runtime
 
-
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3'
 
      implementation Libs.jetbrains.jetbrains
      kapt Libs.room.compiler

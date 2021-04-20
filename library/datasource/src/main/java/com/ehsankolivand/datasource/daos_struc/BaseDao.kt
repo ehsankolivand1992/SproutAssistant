@@ -2,29 +2,28 @@ package com.ehsankolivand.datasource.daos_struc
 
 
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 
-abstract class BaseDao<T> {
+interface BaseDao<T> {
 
-    @Insert
-    abstract  fun insert(entity: T): Long
+     fun getAll():Flow<List<T>>
+     fun getIsDone():Flow<List<T>>
+     fun getToCome():Flow<List<T>>
+     fun searchById(id:Long):T
+     suspend fun insert(entity: T): Long
 
-    @Insert
-    abstract suspend fun insertAll(vararg entity: T)
+     suspend fun insertAll(vararg entity: T)
 
-    @Insert
-    abstract suspend fun insertAll(entities: List<T>)
+     suspend fun insertAll(entities: List<T>)
 
-    @Update
-    abstract suspend fun update(entity: T)
+     suspend fun update(entity: T)
 
-    @Delete
-    abstract suspend fun deleteEntity(entity: T): Int
+     suspend fun deleteEntity(entity: T): Int
 
-    @Transaction
-    open suspend fun withTransaction(tx: suspend () -> Unit) = tx()
+     suspend fun withTransaction(tx: suspend () -> Unit) = tx()
 
-    abstract suspend fun InsertOrupdate(entity: T)
+     suspend fun InsertOrupdate(entity: T)
 
 
 
