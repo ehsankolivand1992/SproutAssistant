@@ -6,9 +6,8 @@ import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import kotlinx.coroutines.flow.Flow
 
 
-class TodoRepository constructor(val dao: TaskDao):BaseTodoRepository<TaskDatabaseEntity> {
-
-
+class TodoRepository constructor(private val dao: TaskDao)
+    :BaseTodoRepository<TaskDatabaseEntity> {
 
     override fun getAll(): Flow<List<TaskDatabaseEntity>> {
         return dao.getAll()
@@ -18,8 +17,7 @@ class TodoRepository constructor(val dao: TaskDao):BaseTodoRepository<TaskDataba
         return dao.searchById(entity.id)
     }
     override suspend fun insertOrUpdate(entity: TaskDatabaseEntity) {
-       return dao.InsertOrupdate(entity)
+        dao.insert(entity)
     }
-
 
 }
