@@ -11,7 +11,7 @@ interface BaseDao<T> {
      fun getIsDone():Flow<List<T>>
      fun getToCome():Flow<List<T>>
      fun searchById(id:Long):T
-     suspend fun insert(entity: T): Long
+      fun insert(entity: T): Long
 
      suspend fun insertAll(vararg entity: T)
 

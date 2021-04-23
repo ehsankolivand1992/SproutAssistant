@@ -22,7 +22,7 @@ abstract class TaskDao:BaseDao<TaskDatabaseEntity> {
     abstract override fun searchById(id: Long): TaskDatabaseEntity
 
     @Insert
-    abstract override suspend fun insert(entity: TaskDatabaseEntity): Long
+    abstract override  fun insert(entity: TaskDatabaseEntity): Long
 
     @Insert
     abstract override suspend fun insertAll(vararg entity: TaskDatabaseEntity)

@@ -50,13 +50,11 @@ class DatabaseUnitTestClass {
     {
         val taskDatabaseEntity = TaskDatabaseEntity("ehsam")
 
-
-
+        taskDao.insert(taskDatabaseEntity)
         val tasks = taskDao.getAll()
 
      //   assertThat(tasks[0].name,equalTo(taskDatabaseEntity.name))
-
-
+        TODO("Write Test For Coroutines")
     }
 
 
