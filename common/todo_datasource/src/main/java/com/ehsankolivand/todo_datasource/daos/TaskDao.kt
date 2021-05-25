@@ -1,7 +1,6 @@
-package com.ehsankolivand.todo_datasource.Daos
+package com.ehsankolivand.todo_datasource.daos
 
 import androidx.room.*
-import com.ehsankolivand.datasource.daos_struc.BaseDao
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -18,12 +17,11 @@ abstract class TaskDao {
     @Query("SELECT * FROM TaskDatabaseEntity WHERE DND == 0")
     abstract  fun getToCome(): Flow<List<TaskDatabaseEntity>>
 
-    @Query("SELECT * FROM taskdatabaseentity WHERE ID == :id")
+    @Query("SELECT * FROM TaskDatabaseEntity WHERE ID == :id")
     abstract  fun searchById(id: Long): TaskDatabaseEntity
 
     @Insert
     abstract   fun insert(entity: TaskDatabaseEntity): Long
-
 
 
     @Update

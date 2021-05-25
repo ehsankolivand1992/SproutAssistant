@@ -2,12 +2,10 @@ package com.ehsankolivand.todo_datasource
 
 import android.content.Context
 import android.util.Log
-import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.espresso.matcher.ViewMatchers.assertThat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.ehsankolivand.todo_datasource.Daos.TaskDao
+import com.ehsankolivand.todo_datasource.daos.TaskDao
 import com.ehsankolivand.todo_datasource.database.TaskDataBase
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import com.ehsankolivand.todo_datasource.repository.TodoRepository
@@ -19,7 +17,6 @@ import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
-import org.hamcrest.CoreMatchers.equalTo
 
 import org.junit.After
 import org.junit.Before
@@ -70,7 +67,6 @@ class DatabaseUnitTestClass {
                 todoRep.insertOrUpdate(TaskDatabaseEntity("task"))
 
                 todoRep.getAll().map {
-                    //   assertThat("task", equalTo("task"))
                     assertEquals(it[0].name, "task")
                 }
             }
