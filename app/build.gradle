@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdk 30
@@ -48,5 +49,19 @@ dependencies {
 
 
 
+    implementation 'com.google.dagger:hilt-android:2.36'
+    kapt 'com.google.dagger:hilt-compiler:2.36'
 
+    // For instrumentation tests
+    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.36'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.36'
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.36'
+    kaptTest 'com.google.dagger:hilt-compiler:2.36'
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+}
+kapt {
+    correctErrorTypes true
 }
