@@ -5,6 +5,8 @@ import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import kotlinx.coroutines.flow.Flow
 
 
+
+
 @Dao
 abstract class TaskDao {
 
@@ -32,8 +34,6 @@ abstract class TaskDao {
     abstract suspend fun update(entity: TaskDatabaseEntity)
 
     @Delete
-    abstract suspend fun deleteEntity(entity: TaskDatabaseEntity): Int
-
-
+   abstract suspend fun deleteEntity(entity: TaskDatabaseEntity): Int
 
 }

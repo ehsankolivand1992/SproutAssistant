@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
 
 }
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
 
@@ -52,11 +53,7 @@ dependencies {
 
 
      implementation 'androidx.room:room-runtime:2.3.0-rc01'
-
-
-
      testImplementation Libs.junit.junit
-
      androidTestImplementation Libs.androidx_test.junitx
      androidTestImplementation Libs.androidx_test.espresso
      implementation Libs.room.ktx
@@ -72,12 +69,38 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
+
+
     // testImplementation for pure JVM unit tests
 /*
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines"
 */
 
     // androidTestImplementation for Android instrumentation tests
+
+
     androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines"
 
+
+    implementation 'com.google.dagger:hilt-android:2.36'
+    kapt 'com.google.dagger:hilt-compiler:2.36'
+
+    // For instrumentation tests
+    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.36'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.36'
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.36'
+    kaptTest 'com.google.dagger:hilt-compiler:2.36'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
+
+}
+
+kapt {
+    correctErrorTypes true
 }
