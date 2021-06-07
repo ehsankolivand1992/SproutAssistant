@@ -9,9 +9,8 @@ rootProject.name = "Sprout Assistant"
 include ':app'
 
 include ':feature'
-include ':feature:todo'
-
-
+include ':feature:AddTodo'
+include ':feature:ListTodo'
 
 include 'library'
 
@@ -19,3 +18,4 @@ include 'common'
 include ':common:todo_datasource'
 include ':library:datasource'
 include ':library:constants'
+

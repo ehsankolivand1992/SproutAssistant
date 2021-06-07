@@ -44,24 +44,25 @@ dependencies {
 
 
 
-    implementation 'com.google.android.material:material:1.3.0'
     implementation project(path: ':common:todo_datasource')
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.core:core-ktx:1.5.0'
-    implementation 'androidx.activity:activity-ktx:1.3.0-beta01'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    testImplementation Libs.junit.junit
+    androidTestImplementation Libs.androidx_test.junitx
+    androidTestImplementation Libs.androidx_test.espresso
 
 
     implementation  Libs.coroutines.coroutines_core
     implementation Libs.coroutines.coroutines_android
     androidTestImplementation   Libs.coroutines.coroutines_test
 
+    implementation  Libs.androidx.activity_ktx
+    implementation  Libs.androidx.appcompat
+    implementation  Libs.material.material
+    implementation  Libs.androidx.constraintlayout
+    implementation  Libs.androidx.ktx
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation  Libs.viewModel.viewmodel
 
 
     implementation Libs.hilt.hilt_android
