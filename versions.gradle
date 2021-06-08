@@ -108,12 +108,15 @@ versions.compose = "2.4.0-alpha02"
 
 libs.navigationComponent = [
         
+      //implementation Libs.navigationComponent...
+
+
 // Java language "" :
 "navigation_fragment" : "androidx.navigation:navigation-fragment:$versions.nav_version",
 "navigation_ui" : "androidx.navigation:navigation-ui:$versions.nav_version",
 
 // Kotlin
-"navigation_fragment-ktx" : "androidx.navigation:navigation-fragment-ktx:$versions.nav_version",
+"navigation_fragment_ktx" : "androidx.navigation:navigation-fragment-ktx:$versions.nav_version",
 "navigation_ui_ktx" : "androidx.navigation:navigation-ui-ktx:$versions.nav_version",
 
 // Feature module Support

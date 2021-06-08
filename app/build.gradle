@@ -45,6 +45,7 @@ dependencies {
 
 
     implementation project(path: ':common:todo_datasource')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
     testImplementation Libs.junit.junit
@@ -76,6 +77,11 @@ dependencies {
     // For local unit tests
     testImplementation Libs.hilt.hilt_android_testing
     kaptTest Libs.hilt.hilt_compiler
+
+
+    //navigation graph
+    implementation Libs.navigationComponent.navigation_fragment_ktx
+    implementation Libs.navigationComponent.navigation_ui_ktx
 
 
 }

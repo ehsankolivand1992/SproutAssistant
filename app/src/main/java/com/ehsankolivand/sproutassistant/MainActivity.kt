@@ -26,12 +26,6 @@ class MainActivity : AppCompatActivity() {
             setContentView(this)
         }
 
-        binding.btnTest.setOnClickListener {
-           appViewModelFactory.insert(TaskDatabaseEntity("ehsan"))
-        }
 
-        appViewModelFactory.taskObservable.observe(this, Observer {
-            Toast.makeText(this,"${it.size} size",Toast.LENGTH_SHORT).show()
-        })
     }
 }
