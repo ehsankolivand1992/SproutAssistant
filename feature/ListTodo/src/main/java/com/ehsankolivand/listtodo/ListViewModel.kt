@@ -1,4 +1,4 @@
-package com.ehsankolivand.sproutassistant
+package com.ehsankolivand.listtodo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,15 +7,15 @@ import androidx.lifecycle.viewModelScope
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import com.ehsankolivand.todo_datasource.repository.TodoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 
 @HiltViewModel
-class AppViewModel @Inject constructor(private val repository: TodoRepository) : ViewModel() {
+class ListViewModel @Inject constructor(private val repository: TodoRepository) :ViewModel() {
     private val _taskDateObservable = MutableLiveData<List<TaskDatabaseEntity>>()
     val taskObservable: LiveData<List<TaskDatabaseEntity>> = _taskDateObservable
 
@@ -33,7 +33,8 @@ class AppViewModel @Inject constructor(private val repository: TodoRepository) :
         }
     }
 
-    fun insert(taskDatabaseEntity: TaskDatabaseEntity)
+
+   fun insert(taskDatabaseEntity: TaskDatabaseEntity)
     {
 
 
@@ -44,6 +45,7 @@ class AppViewModel @Inject constructor(private val repository: TodoRepository) :
             }
         }
     }
+
 
 
 

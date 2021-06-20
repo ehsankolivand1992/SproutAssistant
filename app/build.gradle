@@ -44,8 +44,11 @@ dependencies {
 
 
 
-    implementation project(path: ':common:todo_datasource')
+    //implementation project(path: ':common:todo_datasource')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+  //  implementation project(path: ':feature:AddTodo')
+    implementation project(path: ':feature:ListTodo')
+    implementation project(path: ':common:todo_datasource')
 
 
     testImplementation Libs.junit.junit

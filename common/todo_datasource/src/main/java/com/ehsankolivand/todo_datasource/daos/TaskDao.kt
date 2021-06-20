@@ -34,6 +34,6 @@ abstract class TaskDao {
     abstract suspend fun update(entity: TaskDatabaseEntity)
 
     @Delete
-   abstract suspend fun deleteEntity(entity: TaskDatabaseEntity): Int
+    abstract suspend fun deleteEntity(entity: TaskDatabaseEntity): Int
 
 }

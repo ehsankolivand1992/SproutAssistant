@@ -21,6 +21,7 @@ object DatabaseModule {
    fun provideDataBase(@ApplicationContext context: Context) =
        Room.databaseBuilder(context,
            TaskDataBase::class.java,"tasks.db").build()
+
     @Singleton
     @Provides
     fun provideDao(db : TaskDataBase)=db.getDao()

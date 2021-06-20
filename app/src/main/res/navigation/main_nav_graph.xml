@@ -9,5 +9,16 @@
         android:id="@+id/homeFragment"
         android:name="com.ehsankolivand.sproutassistant.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sub_nav_graph_list"
+            app:destination="@id/sub_nav_graph_list" />
+      <!--  <action
+            android:id="@+id/navigate_to_add"
+            app:destination="@id/sub_nav_graph_add" />-->
+    </fragment>
+<!--
+    <include app:graph="@navigation/sub_nav_graph_add" />
+-->
+    <include app:graph="@navigation/sub_nav_graph_list" />
 </navigation>

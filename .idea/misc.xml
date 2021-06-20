@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/fragment_home.xml" value="0.15443840579710144" />
+        <entry key="..\:/SproutAssistant/feature/AddTodo/src/main/res/layout/fragment_add_task.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/fragment_list_of_tasks.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/task_item.xml" value="0.1490036231884058" />
       </map>
     </option>
   </component>

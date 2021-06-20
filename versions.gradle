@@ -130,6 +130,12 @@ libs.navigationComponent = [
 ]
 
 
+/*
+Groupie is a simple, flexible library for complex RecyclerView layouts.
+*/
+
+
+
 
 
 /*
