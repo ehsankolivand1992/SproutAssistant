@@ -11,7 +11,11 @@ import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     lateinit var listOfTasks:List<TaskDatabaseEntity>
-    inner class ViewHolder(val binding: TaskItemBinding) : RecyclerView.ViewHolder(binding.root)
+
+    inner class ViewHolder(val binding: TaskItemBinding)
+        : RecyclerView.ViewHolder(binding.root)
+
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,7 +33,7 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.todoTitle.text = listOfTasks[position].name
+       // holder.binding = listOfTasks[position].name
     }
 
     override fun getItemCount(): Int {

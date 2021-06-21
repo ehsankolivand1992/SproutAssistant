@@ -6,8 +6,19 @@
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/fragment_home.xml" value="0.15443840579710144" />
         <entry key="..\:/SproutAssistant/feature/AddTodo/src/main/res/layout/fragment_add_task.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/drawable/bg_button.xml" value="0.13125" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/drawable/bg_button_buy_now.xml" value="0.13125" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/drawable/bg_green_line.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/drawable/bg_half_rounded.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/drawable/bg_recommended.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/activity_home_detail.xml" value="0.1" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/activity_tessst.xml" value="0.20416666666666666" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/app_bar_main.xml" value="0.11458333333333333" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/featured_plants_item.xml" value="0.1" />
         <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/fragment_list_of_tasks.xml" value="0.1" />
         <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/layout/task_item.xml" value="0.1490036231884058" />
+        <entry key="..\:/SproutAssistant/feature/ListTodo/src/main/res/menu/navigation.xml" value="0.1" />
       </map>
     </option>
   </component>

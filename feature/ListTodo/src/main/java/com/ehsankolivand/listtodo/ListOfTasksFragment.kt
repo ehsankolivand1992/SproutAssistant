@@ -17,14 +17,6 @@ import com.ehsankolivand.listtodo.view.TaskAdapter
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import dagger.hilt.android.AndroidEntryPoint
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * create an instance of this fragment.
- */
 
 @AndroidEntryPoint
 class ListOfTasksFragment : Fragment() {
@@ -50,14 +42,21 @@ class ListOfTasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        //val componentManager: ListViewModel by viewModels()
-
              listViewModel.taskObservable.observe(requireActivity(), Observer {
                  val adapter = TaskAdapter()
                  adapter.setData(it)
-                 binding.todoListRecycler.layoutManager = LinearLayoutManager(requireContext())
+
+                 binding.todoListRecycler.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                 binding.todoListRecycler.setHasFixedSize(true)
+                 binding.todoListRecycler.isNestedScrollingEnabled = true
                  binding.todoListRecycler.adapter = adapter
+
              })
+
+        binding.todoListRecycler.setOnClickListener {
+           // Navigation.findNavController(view).navigate(R.id.ac_list_to_add)
+
+        }
 
     }
 }
