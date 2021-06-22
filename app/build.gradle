@@ -50,7 +50,6 @@ dependencies {
     implementation project(path: ':feature:ListTodo')
     implementation project(path: ':common:todo_datasource')
     implementation project(path: ':feature:AddTodo')
-    implementation project(path: ':common:navigatior')
 
 
     testImplementation Libs.junit.junit

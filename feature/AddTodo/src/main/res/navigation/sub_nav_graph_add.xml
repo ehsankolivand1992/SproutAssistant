@@ -2,19 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sub_nav_graph_add"
-    app:startDestination="@id/addTaskFragment">
+    android:id="@+id/sub_nav_graph_add">
 
-    <fragment
-        android:id="@+id/addTaskFragment"
-        android:name="com.ehsankolivand.addtodo.AddTaskFragment"
-        android:label="fragment_add_task"
-        tools:layout="@layout/fragment_add_task">
+
+    <dialog
+        android:id="@+id/dialogAddTask"
+        android:name="com.ehsankolivand.addtodo.DialogAddTask"
+        android:label="DialogAddTask">
         <deepLink
             android:id="@+id/deepLink"
-            android:autoVerify="true"
             app:uri="sprout://add" />
-    </fragment>
+    </dialog>
 
 
 </navigation>

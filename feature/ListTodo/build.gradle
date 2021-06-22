@@ -57,7 +57,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-   // implementation project(path: ':common:navigatior')
+    // implementation project(path: ':common:navigatior')
 
     testImplementation Libs.junit.junit
     androidTestImplementation Libs.androidx_test.junitx
@@ -90,8 +90,7 @@ dependencies {
     implementation Libs.UI.circleimageview
     implementation Libs.UI.viewpagerdotsindicator
     implementation Libs.UI.animatedbottombar
-
-
+    //implementation Libs.UI.ReactButton
 
 
 
