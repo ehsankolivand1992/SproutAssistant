@@ -10,10 +10,12 @@ import com.ehsankolivand.addtodo.databinding.DialogAddTaskBinding
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
+import java.util.*
 
 
 @AndroidEntryPoint
-class DialogAddTask : BottomSheetDialogFragment() {
+class DialogAddTask : BottomSheetDialogFragment(), DatePickerDialog.OnDateSetListener {
 
     val addTaskViewModel: AddTaskViewModel by viewModels()
 
@@ -34,6 +36,17 @@ class DialogAddTask : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val now: Calendar = Calendar.getInstance()
+        val dpd: DatePickerDialog = DatePickerDialog.newInstance(
+            this,
+            now.get(Calendar.YEAR),  // Initial year selection
+            now.get(Calendar.MONTH),  // Initial month selection
+            now.get(Calendar.DAY_OF_MONTH) // Inital day selection
+        )
+        dpd.show(parentFragmentManager,"show")
+
+
         binding.btnAdd.setOnClickListener {
            val str =  binding.etTask.text
             if (str.isEmpty())
@@ -44,7 +57,16 @@ class DialogAddTask : BottomSheetDialogFragment() {
                 addTaskViewModel.addNewTask(TaskDatabaseEntity(str.toString()))
                 this.dismiss()
             }
+
+            binding.btnTime.setOnClickListener {
+
+
+            }
         }
 
+    }
+
+    override fun onDateSet(view: DatePickerDialog?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        
     }
 }

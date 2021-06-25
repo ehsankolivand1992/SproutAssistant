@@ -135,6 +135,13 @@ libs.navigationComponent = [
 
 // UI
 
+libs.time = [
+       // Libs.time.materialdatetimepicker
+
+        "materialdatetimepicker" : 'com.wdullaer:materialdatetimepicker:4.2.3'
+]
+
+
 
 libs.UI = [
         /*
