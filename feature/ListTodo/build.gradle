@@ -63,7 +63,6 @@ dependencies {
     androidTestImplementation Libs.androidx_test.junitx
     androidTestImplementation Libs.androidx_test.espresso
 
-    implementation 'com.github.samanzamani.persiandate:PersianDate:0.8'
 
     //navigation graph
     implementation Libs.navigationComponent.navigation_fragment_ktx
