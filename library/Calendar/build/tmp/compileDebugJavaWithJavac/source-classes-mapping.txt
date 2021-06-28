@@ -1,0 +1,2 @@
+com/ehsankolivand/calendar/BuildConfig.java
+ com.ehsankolivand.calendar.BuildConfig
