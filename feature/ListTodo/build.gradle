@@ -69,17 +69,9 @@ dependencies {
     implementation Libs.navigationComponent.navigation_ui_ktx
 
 
-    implementation Libs.hilt.hilt_android
+    api Libs.hilt.hilt_android
     kapt Libs.hilt.hilt_compiler
 
-
-    // For instrumentation tests
-    androidTestImplementation  Libs.hilt.hilt_android_testing
-    kaptAndroidTest Libs.hilt.hilt_compiler
-
-    // For local unit tests
-    testImplementation Libs.hilt.hilt_android_testing
-    kaptTest Libs.hilt.hilt_compiler
 
     implementation  Libs.coroutines.coroutines_core
     implementation Libs.coroutines.coroutines_android
@@ -91,6 +83,7 @@ dependencies {
     implementation Libs.UI.animatedbottombar
     //implementation Libs.UI.ReactButton
 
+    implementation 'com.tbuonomo:dotsindicator:4.2'
 
 
 }

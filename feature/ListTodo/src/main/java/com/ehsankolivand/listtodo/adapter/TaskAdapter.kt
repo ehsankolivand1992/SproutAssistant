@@ -1,7 +1,6 @@
-package com.ehsankolivand.listtodo.view
+package com.ehsankolivand.listtodo.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ehsankolivand.listtodo.databinding.TaskItemBinding

@@ -75,7 +75,7 @@ dependencies {
 
     implementation Libs.time.materialdatetimepicker
 
-    implementation Libs.hilt.hilt_android
+    api Libs.hilt.hilt_android
     kapt Libs.hilt.hilt_compiler
 
 
