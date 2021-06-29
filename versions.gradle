@@ -48,7 +48,7 @@ libs.jetbrains = [
 ]
 
 
-versions.hilt = "2.36"
+versions.hilt = "2.37"
 libs.hilt =[
 
         "hilt_android" : "com.google.dagger:hilt-android:$versions.hilt",
