@@ -20,4 +20,3 @@ include ':library:datasource'
 include ':library:constants'
 
 include ':common:navigatior'
-include ':feature:DetailsTodo'

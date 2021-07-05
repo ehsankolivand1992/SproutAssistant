@@ -6,12 +6,12 @@ plugins {
 apply plugin: 'dagger.hilt.android.plugin'
 
 android {
-    compileSdk 30
+    compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdk 25
-        targetSdk 30
+        minSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -32,29 +32,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         viewBinding true
     }
-
 }
 
 dependencies {
 
-
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation  Libs.androidx.activity_ktx
     implementation  Libs.androidx.appcompat
     implementation  Libs.material.material
     implementation  Libs.androidx.constraintlayout
     implementation  Libs.androidx.ktx
-
-    implementation  Libs.viewModel.viewmodel
-
-
-    implementation  Libs.androidx.constraintlayout
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':common:todo_datasource')
-    // implementation project(path: ':common:navigatior')
 
     testImplementation Libs.junit.junit
     androidTestImplementation Libs.androidx_test.junitx
@@ -66,21 +60,29 @@ dependencies {
     implementation Libs.navigationComponent.navigation_ui_ktx
 
 
-    api Libs.hilt.hilt_android
+    implementation Libs.hilt.hilt_android
     kapt Libs.hilt.hilt_compiler
 
+
+    // For instrumentation tests
+    androidTestImplementation  Libs.hilt.hilt_android_testing
+    kaptAndroidTest Libs.hilt.hilt_compiler
+
+    // For local unit tests
+    testImplementation Libs.hilt.hilt_android_testing
+    kaptTest Libs.hilt.hilt_compiler
 
     implementation  Libs.coroutines.coroutines_core
     implementation Libs.coroutines.coroutines_android
     androidTestImplementation   Libs.coroutines.coroutines_test
 
+    implementation  Libs.viewModel.viewmodel
+
+
 
     implementation Libs.UI.circleimageview
     implementation Libs.UI.viewpagerdotsindicator
     implementation Libs.UI.animatedbottombar
-    //implementation Libs.UI.ReactButton
-
-    implementation 'com.tbuonomo:dotsindicator:4.2'
 
 
 }

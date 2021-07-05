@@ -18,7 +18,7 @@ class HomeFragment : Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_home, container, false)
         view.setOnClickListener {
-           Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_sub_nav_graph_list)
+           Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_sub_nav_graph_details)
 
         }
         return view
