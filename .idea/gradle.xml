@@ -16,7 +16,6 @@
             <option value="$PROJECT_DIR$/common/todo_datasource" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/AddTodo" />
-            <option value="$PROJECT_DIR$/feature/DetailsTodo" />
             <option value="$PROJECT_DIR$/feature/ListTodo" />
             <option value="$PROJECT_DIR$/feature/TodoDetails" />
             <option value="$PROJECT_DIR$/library" />

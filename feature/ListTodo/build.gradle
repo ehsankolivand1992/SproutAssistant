@@ -75,12 +75,7 @@ dependencies {
     androidTestImplementation   Libs.coroutines.coroutines_test
 
 
-    implementation Libs.UI.circleimageview
-    implementation Libs.UI.viewpagerdotsindicator
-    implementation Libs.UI.animatedbottombar
-    //implementation Libs.UI.ReactButton
 
-    implementation 'com.tbuonomo:dotsindicator:4.2'
 
 
 }

@@ -11,14 +11,10 @@
         android:name="com.ehsankolivand.sproutassistant.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
+
         <action
-            android:id="@+id/action_homeFragment_to_sub_nav_graph_list"
-            app:destination="@id/sub_nav_graph_list" />
-       <action
-            android:id="@+id/navigate_to_add"
-            app:destination="@id/sub_nav_graph_add" />
-        <action
-            android:id="@+id/action_homeFragment_to_sub_nav_graph_details"
+            android:id="@+id/action_homeFragment_to_sub_nav_graph_details3"
             app:destination="@id/sub_nav_graph_details" />
     </fragment>
 
