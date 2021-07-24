@@ -9,5 +9,8 @@
         android:name="com.ehsankolivand.tododetails.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
+    <deepLink
+        android:id="@+id/deepLink"
+        app:uri="sprout://details" />
 
 </navigation>

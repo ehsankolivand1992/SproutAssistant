@@ -14,8 +14,13 @@
         <action
             android:id="@+id/to_goh"
             app:destination="@id/sub_nav_graph_details" />
+        <action
+            android:id="@+id/to_list"
+            app:destination="@id/sub_nav_graph_list" />
     </fragment>
     <include app:graph="@navigation/sub_nav_graph_details" />
+    <include app:graph="@navigation/sub_nav_graph_add" />
+    <include app:graph="@navigation/sub_nav_graph_list" />
 
 
 </navigation>

@@ -35,11 +35,10 @@ class PomodoroFragment : Fragment() {
         }
     }
 
-    inner class timer : CountDownTimer(90000,1000) {
+    inner class timer : CountDownTimer(1501000,1000) {
         override fun onTick(millisUntilFinished: Long) {
             binding.etTimer.setText(millisUntilFinished.toTime())
         }
-
         override fun onFinish() {
         }
 

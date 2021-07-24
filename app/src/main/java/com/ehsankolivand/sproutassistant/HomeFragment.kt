@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-      Navigation.findNavController(view).navigate(R.id.to_goh)
+      Navigation.findNavController(view).navigate(R.id.to_list)
 
 
     }

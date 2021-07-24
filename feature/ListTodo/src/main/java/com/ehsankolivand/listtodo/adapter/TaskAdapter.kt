@@ -7,12 +7,19 @@ import com.ehsankolivand.listtodo.databinding.TaskItemBinding
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 
 
-class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
+class TaskAdapter(private val onItemClicked: (TaskDatabaseEntity) -> Unit
+) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     lateinit var listOfTasks:List<TaskDatabaseEntity>
 
     inner class ViewHolder(val binding: TaskItemBinding)
-        : RecyclerView.ViewHolder(binding.root)
+        : RecyclerView.ViewHolder(binding.root){
+            init {
+                itemView.setOnClickListener{
+                    onItemClicked(listOfTasks[adapterPosition])
+                }
+            }
+        }
 
 
 
@@ -21,9 +28,9 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
         val binding =
             TaskItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-
         return ViewHolder(binding)
     }
+
 
     fun setData(list: List<TaskDatabaseEntity>)
     {
@@ -33,6 +40,7 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.task.text = listOfTasks[position].name
+        holder.binding.root.setOnClickListener {  onItemClicked( listOfTasks[position])}
     }
 
     override fun getItemCount(): Int {
@@ -42,4 +50,5 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
             0
         }
     }
+
 }
