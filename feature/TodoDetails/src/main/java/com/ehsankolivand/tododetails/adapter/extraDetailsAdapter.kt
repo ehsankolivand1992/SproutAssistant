@@ -1,15 +1,13 @@
 package com.ehsankolivand.tododetails.adapter
 
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.ehsankolivand.tododetails.DetailsFragment
-import com.ehsankolivand.tododetails.one
-import com.ehsankolivand.tododetails.two
+import com.ehsankolivand.tododetails.InfoFragment
+import com.ehsankolivand.tododetails.PomodoroFragment
 
-class extraDetailsAdapter constructor(fragment: DetailsFragment): FragmentStateAdapter(fragment) {
+class extraDetailsAdapter constructor(fragment: DetailsFragment):
+    FragmentStateAdapter(fragment) {
 
 
     override fun getItemCount(): Int {
@@ -19,10 +17,10 @@ class extraDetailsAdapter constructor(fragment: DetailsFragment): FragmentStateA
     override fun createFragment(position: Int): Fragment {
         when(position)
         {
-            0-> return one()
-            1-> return two()
+            0-> return InfoFragment()
+            1-> return PomodoroFragment()
         }
-        return one()
+        return InfoFragment()
     }
 
 

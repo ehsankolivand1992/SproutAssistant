@@ -23,13 +23,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_sub_nav_graph_details3)
 
-            Toast.makeText(requireContext(),"salam madefucker", Toast.LENGTH_LONG).show()
 
-        }
+      Navigation.findNavController(view).navigate(R.id.to_goh)
+
 
     }
-
 }
