@@ -15,7 +15,7 @@ import java.util.*
 
 
 @AndroidEntryPoint
-class DialogAddTask : BottomSheetDialogFragment(), DatePickerDialog.OnDateSetListener {
+class DialogAddTask : BottomSheetDialogFragment(){
 
     val addTaskViewModel: AddTaskViewModel by viewModels()
 
@@ -38,13 +38,6 @@ class DialogAddTask : BottomSheetDialogFragment(), DatePickerDialog.OnDateSetLis
         super.onViewCreated(view, savedInstanceState)
 
         val now: Calendar = Calendar.getInstance()
-        val dpd: DatePickerDialog = DatePickerDialog.newInstance(
-            this,
-            now.get(Calendar.YEAR),  // Initial year selection
-            now.get(Calendar.MONTH),  // Initial month selection
-            now.get(Calendar.DAY_OF_MONTH) // Inital day selection
-        )
-        dpd.show(parentFragmentManager,"show")
 
 
         binding.btnAdd.setOnClickListener {
@@ -66,7 +59,5 @@ class DialogAddTask : BottomSheetDialogFragment(), DatePickerDialog.OnDateSetLis
 
     }
 
-    override fun onDateSet(view: DatePickerDialog?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
-        
-    }
+
 }

@@ -12,8 +12,6 @@ android {
     defaultConfig {
         minSdk 25
         targetSdk 30
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -40,6 +38,9 @@ android {
 
 dependencies {
 
+    implementation 'com.github.Zardozz:fixedheadertablelayout:0.0.0.2'
+
+
 
 
     implementation  Libs.androidx.activity_ktx
@@ -63,7 +64,6 @@ dependencies {
     androidTestImplementation Libs.androidx_test.junitx
     androidTestImplementation Libs.androidx_test.espresso
 
-    implementation 'com.github.samanzamani.persiandate:PersianDate:0.8'
 
     //navigation graph
     implementation Libs.navigationComponent.navigation_fragment_ktx
@@ -91,6 +91,9 @@ dependencies {
     implementation Libs.UI.viewpagerdotsindicator
     implementation Libs.UI.animatedbottombar
     //implementation Libs.UI.ReactButton
+
+
+    implementation 'io.github.cliffgr:cpbar:1.0.0'
 
 
 

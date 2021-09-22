@@ -33,7 +33,7 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.task.text = listOfTasks[position].name
+        holder.binding.txtTitle.text = this.listOfTasks[position].name
     }
 
     override fun getItemCount(): Int {

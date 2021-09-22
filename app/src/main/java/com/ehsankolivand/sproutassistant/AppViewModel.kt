@@ -1,9 +1,9 @@
 package com.ehsankolivand.sproutassistant
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import android.util.Log
+import androidx.lifecycle.*
+import com.ehsankolivand.sproutassistant.abstraction.IAppViewModel
+import com.ehsankolivand.sproutassistant.abstraction.Router
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
 import com.ehsankolivand.todo_datasource.repository.TodoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,26 +15,23 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class AppViewModel @Inject constructor(private val repository: TodoRepository) : ViewModel() {
-    private val _taskDateObservable = MutableLiveData<List<TaskDatabaseEntity>>()
-    val taskObservable: LiveData<List<TaskDatabaseEntity>> = _taskDateObservable
+class AppViewModel @Inject constructor(private val repository: TodoRepository) : ViewModel(),IAppViewModel {
 
-    init {
-        viewModelScope.launch {
-            fetchTasks()
-        }
-    }
 
 
     private suspend fun fetchTasks()
     {
         repository.getAll().collect {
-            _taskDateObservable.postValue(it)
         }
     }
 
-    fun insert(taskDatabaseEntity: TaskDatabaseEntity)
+
+
+
+    override fun insert(taskDatabaseEntity: TaskDatabaseEntity)
     {
+
+
 
 
         viewModelScope.launch {
@@ -44,6 +41,7 @@ class AppViewModel @Inject constructor(private val repository: TodoRepository) :
             }
         }
     }
+
 
 
 

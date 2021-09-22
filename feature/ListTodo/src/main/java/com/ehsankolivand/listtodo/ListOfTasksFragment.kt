@@ -41,11 +41,7 @@ class ListOfTasksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _listOfTasksBinding?.button?.setOnClickListener {
-            val uri = Uri.parse("sprout://add")
-            Navigation.findNavController(view).navigate(uri)
 
-        }
 
              listViewModel.taskObservable.observe(requireActivity(), Observer {
                  val adapter = TaskAdapter()
@@ -59,7 +55,6 @@ class ListOfTasksFragment : Fragment() {
              })
 
         binding.todoListRecycler.setOnClickListener {
-           // Navigation.findNavController(view).navigate(R.id.ac_list_to_add)
 
         }
 
