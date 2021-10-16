@@ -54,9 +54,6 @@ dependencies {
     implementation  Libs.androidx.constraintlayout
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':common:todo_datasource')
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     // implementation project(path: ':common:navigatior')
 
     testImplementation Libs.junit.junit
@@ -64,33 +61,20 @@ dependencies {
     androidTestImplementation Libs.androidx_test.espresso
 
 
-
     //navigation graph
     implementation Libs.navigationComponent.navigation_fragment_ktx
     implementation Libs.navigationComponent.navigation_ui_ktx
 
 
-    implementation Libs.hilt.hilt_android
+    api Libs.hilt.hilt_android
     kapt Libs.hilt.hilt_compiler
 
-
-    // For instrumentation tests
-    androidTestImplementation  Libs.hilt.hilt_android_testing
-    kaptAndroidTest Libs.hilt.hilt_compiler
-
-    // For local unit tests
-    testImplementation Libs.hilt.hilt_android_testing
-    kaptTest Libs.hilt.hilt_compiler
 
     implementation  Libs.coroutines.coroutines_core
     implementation Libs.coroutines.coroutines_android
     androidTestImplementation   Libs.coroutines.coroutines_test
 
 
-    implementation Libs.UI.circleimageview
-    implementation Libs.UI.viewpagerdotsindicator
-    implementation Libs.UI.animatedbottombar
-    //implementation Libs.UI.ReactButton
 
 
 

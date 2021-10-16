@@ -48,7 +48,7 @@ libs.jetbrains = [
 ]
 
 
-versions.hilt = "2.36"
+versions.hilt = "2.37"
 libs.hilt =[
 
         "hilt_android" : "com.google.dagger:hilt-android:$versions.hilt",
@@ -134,6 +134,13 @@ libs.navigationComponent = [
 
 
 // UI
+
+libs.time = [
+       // Libs.time.materialdatetimepicker
+
+        "materialdatetimepicker" : 'com.wdullaer:materialdatetimepicker:4.2.3'
+]
+
 
 
 libs.UI = [

@@ -10,14 +10,11 @@ import java.util.*
 @Entity
 data class TaskDatabaseEntity(
     @field:ColumnInfo(name = "Name") val name: String?,
-
 /** Work duration, in minutes.  */
     @field:ColumnInfo(name = "WorkDuration") val workDuration: Int,
-
 /** Break duration, in minutes.  */
     @field:ColumnInfo(name = "BreakDuration") val breakDuration: Int,
     @field:ColumnInfo(name = "LongBreaks") val isLongBreaks: Boolean,
-
 /** Long break duration, in minutes.  */
     @field:ColumnInfo(name = "LongBreakDuration") val longBreakDuration: Int,
     @field:ColumnInfo(name = "SessionsBeforeLongBreak") val sessionsBeforeLongBreak: Int,

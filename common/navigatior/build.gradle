@@ -36,6 +36,8 @@ dependencies {
 
     implementation project(path: ':feature:AddTodo')
     implementation project(path: ':feature:ListTodo')
+    implementation project(path: ':feature:TodoDetails')
+
     testImplementation Libs.junit.junit
     androidTestImplementation Libs.androidx_test.junitx
     androidTestImplementation Libs.androidx_test.espresso
