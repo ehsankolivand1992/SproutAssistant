@@ -34,8 +34,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_sub_nav_graph_list)
-
+        Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_sub_nav_graph_goal)
 
     }
 

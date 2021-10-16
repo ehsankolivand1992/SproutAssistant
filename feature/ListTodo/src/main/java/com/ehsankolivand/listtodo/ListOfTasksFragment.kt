@@ -41,12 +41,10 @@ class ListOfTasksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
+/*
              listViewModel.taskObservable.observe(requireActivity(), Observer {
                  val adapter = TaskAdapter()
                  adapter.setData(it)
-
                  binding.todoListRecycler.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
                  binding.todoListRecycler.setHasFixedSize(true)
                  binding.todoListRecycler.isNestedScrollingEnabled = true
@@ -56,7 +54,7 @@ class ListOfTasksFragment : Fragment() {
 
         binding.todoListRecycler.setOnClickListener {
 
-        }
+        }*/
 
     }
 }

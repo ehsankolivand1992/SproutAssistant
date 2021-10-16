@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sub_nav_graph_add_goal"
+    app:startDestination="@id/dialogAddGoal">
+
+    <fragment
+        android:id="@+id/dialogAddGoal"
+        android:name="com.example.addgoal.DialogAddGoal"
+        android:label="DialogAddGoal" >
+
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="sprout://add-goal" />
+    </fragment>
+</navigation>

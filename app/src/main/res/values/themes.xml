@@ -8,4 +8,13 @@
         <item name="fontFamily">@font/gill_sens_fonts</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.SproutAssistant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SproutAssistant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SproutAssistant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

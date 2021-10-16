@@ -2,12 +2,10 @@ package com.ehsankolivand.todo_datasource.di
 
 import android.content.Context
 import androidx.room.Room
-import com.ehsankolivand.todo_datasource.daos.TaskDao
 import com.ehsankolivand.todo_datasource.database.TaskDataBase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.internal.managers.ApplicationComponentManager
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
@@ -27,6 +25,8 @@ object DatabaseModule {
     fun provideDao(db : TaskDataBase)=db.getDao()
 
 
-
+    @Singleton
+    @Provides
+    fun provideGoalDao(db: TaskDataBase)= db.getGoalDao()
 
 }

@@ -20,3 +20,7 @@ include ':library:datasource'
 include ':library:constants'
 
 include ':common:navigatior'
+include ':feature:GoalList'
+include ':feature:AddGoal'
+include ':library:shared_ui'
+include ':common:UICenter'

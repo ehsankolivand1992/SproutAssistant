@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdk 25
+        minSdk 26
         targetSdk 30
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -48,6 +48,11 @@ dependencies {
     implementation  Libs.material.material
     implementation  Libs.androidx.constraintlayout
     implementation  Libs.androidx.ktx
+
+
+
+
+
 
     implementation  Libs.viewModel.viewmodel
 
@@ -93,7 +98,6 @@ dependencies {
     //implementation Libs.UI.ReactButton
 
 
-    implementation 'io.github.cliffgr:cpbar:1.0.0'
 
 
 

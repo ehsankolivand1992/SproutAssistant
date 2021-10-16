@@ -105,7 +105,7 @@ libs.androidx_test = [
 
 
 versions.nav_version = "2.3.5"
-versions.compose = "2.4.0-alpha02"
+versions.Jcompose = "2.4.0-alpha02"
 
 libs.navigationComponent = [
         
@@ -127,7 +127,7 @@ libs.navigationComponent = [
 "navigation_testing" : "androidx.navigation:navigation-testing:$versions.nav_version",
 
 // Jetpack Compose Integration
-"navigation_compose" : "androidx.navigation:navigation-compose:$versions.compose"
+"navigation_compose" : "androidx.navigation:navigation-compose:$versions.Jcompose"
 ]
 
 
@@ -157,6 +157,15 @@ libs.UI = [
         "animatedbottombar" : "nl.joery.animatedbottombar:library:1.1.0",
         "ReactButton" : "com.github.AmrDeveloper:ReactButton:2.0.1"
 
+]
+
+
+libs.JetpackCompose =[
+        "ui" :"androidx.compose.ui:ui:$compose_version",
+        "material": "androidx.compose.material:material:$compose_version",
+        "preview": "androidx.compose.ui:ui-tooling-preview:$compose_version",
+        "junit4": "androidx.compose.ui:ui-test-junit4:$compose_version",
+        "tooling": "androidx.compose.ui:ui-tooling:$compose_version" ,
 ]
 
 

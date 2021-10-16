@@ -14,7 +14,6 @@ abstract class TaskDao {
     @Query("SELECT * FROM TaskDatabaseEntity")
     abstract fun getAll(): Flow<List<TaskDatabaseEntity>>
 
-
     @Query("SELECT * FROM TaskDatabaseEntity WHERE DND == 1")
     abstract fun getIsDone(): Flow<List<TaskDatabaseEntity>>
 

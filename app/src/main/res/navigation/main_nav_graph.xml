@@ -17,9 +17,17 @@
        <action
             android:id="@+id/navigate_to_add"
             app:destination="@id/sub_nav_graph_add" />
+        <action
+            android:id="@+id/action_homeFragment_to_sub_nav_graph_goal"
+            app:destination="@id/sub_nav_graph_goal" />
+        <action
+            android:id="@+id/action_homeFragment_to_sub_nav_graph_add_goal"
+            app:destination="@id/sub_nav_graph_add_goal" />
     </fragment>
 
     <include app:graph="@navigation/sub_nav_graph_add" />
 
     <include app:graph="@navigation/sub_nav_graph_list" />
+    <include app:graph="@navigation/sub_nav_graph_add_goal" />
+    <include app:graph="@navigation/sub_nav_graph_goal" />
 </navigation>

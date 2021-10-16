@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sub_nav_graph_goal"
+    app:startDestination="@id/goalListFragment">
+
+    <fragment
+        android:id="@+id/goalListFragment"
+        android:name="com.example.goallist.GoalListFragment"
+        android:label="fragment_goal_list"
+        tools:layout="@layout/fragment_goal_list" />
+</navigation>

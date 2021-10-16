@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/compose-model-1634202905803.xml" value="0.17696867061812024" />
+        <entry key="../../../../layout/compose-model-1634203049314.xml" value="0.17037037037037037" />
+        <entry key="../../../../layout/compose-model-1634203126715.xml" value="0.17037037037037037" />
+        <entry key="../../../../layout/compose-model-1634203174355.xml" value="0.17037037037037037" />
+        <entry key="../../../../layout/compose-model-1634216976034.xml" value="0.1939034716342083" />
+        <entry key="../../../../layout/compose-model-1634217108168.xml" value="0.1939034716342083" />
+        <entry key="../../../../layout/compose-model-1634217151406.xml" value="0.17781541066892464" />
+        <entry key="../../../../layout/compose-model-1634217186458.xml" value="0.17781541066892464" />
+        <entry key="../../../../layout/compose-model-1634217349439.xml" value="0.16" />
+        <entry key="../../../../layout/compose-model-1634217624413.xml" value="0.1939034716342083" />
+        <entry key="../../../../layout/compose-model-1634217797572.xml" value="0.22" />
+        <entry key="../../../../layout/compose-model-1634370093418.xml" value="0.2734970364098222" />
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/SproutAssistant/app/src/main/res/layout/fragment_home.xml" value="0.15443840579710144" />
         <entry key="..\:/SproutAssistant/feature/AddTodo/src/main/res/layout/dialog_add_task.xml" value="0.2" />
@@ -23,13 +35,32 @@
         <entry key="app/src/main/res/drawable/ic_tab_bar.xml" value="0.173" />
         <entry key="app/src/main/res/font/gill.xml" value="0.2851851851851852" />
         <entry key="app/src/main/res/font/gill_sens_fonts.xml" value="0.2851851851851852" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3422459893048128" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.13240740740740742" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.13240740740740742" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1425925925925926" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.15080718994140635" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.1945578231292517" />
         <entry key="app/src/main/res/menu/botton_nav_menu.xml" value="1.3464285714285715" />
+        <entry key="feature/AddGoal/src/main/res/layout/dialog_add_goal.xml" value="0.15070921985815602" />
+        <entry key="feature/AddTodo/src/main/res/layout/dialog_add_task.xml" value="0.11775362318840579" />
+        <entry key="feature/GoalList/src/main/res/layout/fragment_goal_list.xml" value="0.10144927536231885" />
+        <entry key="feature/GoalList/src/main/res/layout/task_item.xml" value="0.10144927536231885" />
         <entry key="feature/ListTodo/src/main/res/drawable/circle.xml" value="0.154" />
         <entry key="feature/ListTodo/src/main/res/layout/fragment_list_of_tasks.xml" value="0.15070921985815602" />
         <entry key="feature/ListTodo/src/main/res/layout/task_item.xml" value="0.29830323600212977" />
         <entry key="feature/ListTodo/src/main/res/layout/task_items.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/drawable/circle.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/drawable/outline_alarm_24.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/layout/goal_item.xml" value="0.24307250976562522" />
+        <entry key="library/shared_ui/src/main/res/layout/rv_goal_item.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/layout/rv_item_goal.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/layout/rv_item_sticker.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/layout/task_dialog.xml" value="0.1" />
+        <entry key="library/shared_ui/src/main/res/layout/task_item.xml" value="0.1" />
       </map>
     </option>
   </component>

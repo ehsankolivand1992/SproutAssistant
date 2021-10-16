@@ -12,14 +12,18 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/UICenter" />
             <option value="$PROJECT_DIR$/common/navigatior" />
             <option value="$PROJECT_DIR$/common/todo_datasource" />
             <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/AddGoal" />
             <option value="$PROJECT_DIR$/feature/AddTodo" />
+            <option value="$PROJECT_DIR$/feature/GoalList" />
             <option value="$PROJECT_DIR$/feature/ListTodo" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/library/constants" />
             <option value="$PROJECT_DIR$/library/datasource" />
+            <option value="$PROJECT_DIR$/library/shared_ui" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
