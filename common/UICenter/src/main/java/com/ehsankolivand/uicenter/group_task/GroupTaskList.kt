@@ -80,7 +80,7 @@ fun GroupItems()
 }
 
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun GroupPreview()
 {

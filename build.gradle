@@ -5,7 +5,6 @@ buildscript {
         google()
         mavenCentral()
 
-
     }
     
     ext.buildConfig = [
@@ -26,7 +25,7 @@ buildscript {
         junitVersion = '4.13.1'
         espressoVersion = '3.1.0'
         androidxJunitVersion = '1.1.2'
-        compose_version = '1.0.1'
+        compose_version = '1.0.4'
 
     }
     apply from: rootProject.file('versions.gradle')
@@ -36,7 +35,7 @@ buildscript {
     dependencies {
         
         classpath 'com.android.tools.build:gradle:7.1.0-alpha13'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.36'
 
 
@@ -48,3 +47,4 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
