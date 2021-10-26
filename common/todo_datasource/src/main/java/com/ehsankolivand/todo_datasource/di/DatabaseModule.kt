@@ -29,4 +29,8 @@ object DatabaseModule {
     @Provides
     fun provideGoalDao(db: TaskDataBase)= db.getGoalDao()
 
+    @Singleton
+    @Provides
+    fun provideBaseTodoDao(db : TaskDataBase)=db.getBaseTodoDao()
+
 }

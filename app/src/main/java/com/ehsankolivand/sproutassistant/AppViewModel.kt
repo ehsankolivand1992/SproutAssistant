@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.ehsankolivand.sproutassistant.abstraction.IAppViewModel
 import com.ehsankolivand.sproutassistant.abstraction.Router
-import com.ehsankolivand.todo_datasource.entity.GoalEntity
+import com.ehsankolivand.todo_datasource.entity.BaseTodoEntity
 import com.ehsankolivand.todo_datasource.entity.TaskDatabaseEntity
-import com.ehsankolivand.todo_datasource.repository.GoalRepository
+import com.ehsankolivand.todo_datasource.repository.BaseTodoRepository
 import com.ehsankolivand.todo_datasource.repository.TodoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.scopes.ViewModelScoped
@@ -17,10 +17,11 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class AppViewModel @Inject constructor(private val repository: GoalRepository) : ViewModel(),IAppViewModel<GoalEntity> {
+class AppViewModel @Inject constructor(private val repository: BaseTodoRepository) :
+    ViewModel(),IAppViewModel<BaseTodoEntity> {
 
-    private val _goalDateObservable = MutableLiveData<List<GoalEntity>>()
-    val goalObservable: LiveData<List<GoalEntity>> = _goalDateObservable
+    private val _BaseTodoDateObservable = MutableLiveData<List<BaseTodoEntity>>()
+    val BaseTodoObservable: LiveData<List<BaseTodoEntity>> = _BaseTodoDateObservable
 
     init {
         viewModelScope.launch {
@@ -30,9 +31,11 @@ class AppViewModel @Inject constructor(private val repository: GoalRepository) :
 
 
 
+
+
     override suspend fun getAll() {
-        repository.getAllGoal().collect {
-            _goalDateObservable.postValue(it)
+        repository.getAllBaseTodo().collect {
+            _BaseTodoDateObservable.postValue(it)
         }
     }
 
@@ -43,30 +46,34 @@ class AppViewModel @Inject constructor(private val repository: GoalRepository) :
 
 
 
-     override fun insert(taskDatabaseEntity: GoalEntity)
+
+     override fun insert(taskDatabaseEntity: BaseTodoEntity)
     {
         viewModelScope.launch {
             withContext(Dispatchers.IO)
             {
-                repository.insertGoal(taskDatabaseEntity)
+                repository.insertBaseTodo(taskDatabaseEntity)
             }
         }
     }
 
-    override fun update(entity: GoalEntity) {
+
+
+    override fun update(entity: BaseTodoEntity) {
         viewModelScope.launch {
             withContext(Dispatchers.IO)
             {
-                repository.updateGoal(entity)
+                repository.updateBaseTodo(entity)
             }
         }
     }
 
-    override fun delete(entity: GoalEntity) {
+
+    override fun delete(entity: BaseTodoEntity) {
         viewModelScope.launch {
             withContext(Dispatchers.IO)
             {
-                repository.deleteGoal(entity)
+                repository.deleteBaseTodo(entity)
             }
         }
     }

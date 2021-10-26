@@ -77,6 +77,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'androidx.activity:activity-compose:1.3.1'
     implementation 'androidx.emoji:emoji:1.2.0-alpha03'
+    implementation project(path: ':common:UICenter')
+    implementation 'androidx.compose.runtime:runtime-livedata:1.0.4'
+
 
     testImplementation Libs.junit.junit
     androidTestImplementation Libs.androidx_test.junitx

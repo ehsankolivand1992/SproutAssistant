@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.ehsankolivand.todo_datasource.daos.BaseTodoDao
 import com.ehsankolivand.todo_datasource.daos.GoalDao
 import com.ehsankolivand.todo_datasource.daos.ScheduledTaskDao
 import com.ehsankolivand.todo_datasource.daos.TaskDao
@@ -20,4 +21,5 @@ abstract class TaskDataBase:RoomDatabase() {
     abstract fun getDao():TaskDao
     abstract fun getScheduledTaskDaop():ScheduledTaskDao
     abstract fun getGoalDao():GoalDao
+    abstract fun getBaseTodoDao():BaseTodoDao
 }

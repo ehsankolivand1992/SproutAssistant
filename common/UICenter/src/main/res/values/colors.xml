@@ -10,4 +10,22 @@
     <color name="bottom_back">#FFFFFF</color>
     <color name="pink_lace">#FCD4FEff</color>
 
+
+
+
+
+    <color name="priority_liberty_">#494CA2</color>
+    <color name="priority_mulberry_">#BC5090</color>
+    <color name="priority_red">#FF6361</color>
+    <color name="priority_chineseGreen">#D2D462</color>
+    <color name="priority_russianGreen">#6F975C</color>
+    
+    <array name="priority_colors">
+        <item>#494CA2</item>
+        <item>#BC5090</item>
+        <item>#FF6361</item>
+        <item>#D2D462</item>
+        <item>#6F975C</item>
+    </array>
+
 </resources>

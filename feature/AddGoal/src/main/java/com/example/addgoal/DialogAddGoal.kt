@@ -49,7 +49,7 @@ class DialogAddGoal : BottomSheetDialogFragment(){
                 Toast.makeText(requireContext(),"please add a text",Toast.LENGTH_SHORT).show()
             }else{
 
-                addTaskViewModel.addNewGoal(GoalEntity(0,str.toString(),"","",""))
+                addTaskViewModel.addNewGoal(GoalEntity(0,str.toString(),"",0,"",0))
                 this.dismiss()
                 findNavController().popBackStack()
             }

@@ -8,10 +8,11 @@ class ScheduledTaskEntity(
     id: Long,
     title: String,
     description: String,
-    sticker: String,
+    sticker: Int,
     parent_id: Long,
+    color:Long,
     @ColumnInfo(name = "time")
     var time: Long,
     @ColumnInfo(name = "date")
     var date: Long
-) : BaseTodoEntity(id, title, description, sticker, parent_id, false, "", "")
+) : BaseTodoEntity(id, title, description, sticker, parent_id, false, "", color)

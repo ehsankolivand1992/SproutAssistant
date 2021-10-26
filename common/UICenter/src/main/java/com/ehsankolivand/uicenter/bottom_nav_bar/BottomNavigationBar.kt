@@ -1,12 +1,13 @@
 package com.ehsankolivand.uicenter.bottom_nav_bar
 
 import android.util.Log
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,40 +26,46 @@ fun BottomNavigationBar() {
         NavigationItem.Notification,
         NavigationItem.Profile
     )
-     Row(modifier = Modifier
-        .fillMaxWidth()
-        .fillMaxHeight(0.09f),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-
-         items.forEach {
-             if (it.title.equals("Add"))
-             {
-                 Image(painter = painterResource(id = it.icon),
-                     contentDescription = it.title,modifier =
-                     Modifier.weight(1f)
-                         .requiredHeight(90.dp)
-                         .requiredWidth(90.dp)
-                         .absoluteOffset(y=-20.dp)
-                         .clickable {
-                             NavigationClickHandler(it)
-                         })
-             }else
-             {
-                 Image(painter =
-                 painterResource(id = it.icon),
-                     contentDescription =
-                     it.title,modifier =
-                     Modifier.weight(1f)
-                         .clickable {
-                         NavigationClickHandler(it)
-                     })
-             }
-
-         }
 
 
+    Column(modifier = Modifier.fillMaxWidth()) {
+
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.Bottom
+        ) {
+
+            items.forEach {
+                if (it.title.equals("Add")) {
+                    Image(painter = painterResource(id = it.icon),
+                        contentDescription = it.title, modifier =
+                        Modifier
+                            .weight(1f)
+                            .requiredHeight(70.dp)
+                            .requiredWidth(70.dp)
+                            .absoluteOffset(y = -1.dp)
+                            .clickable {
+                                NavigationClickHandler(it)
+                            })
+                } else {
+                    Image(painter =
+                    painterResource(id = it.icon),
+                        contentDescription =
+                        it.title, modifier =
+                        Modifier.weight(1f)
+                            .clickable {
+                                NavigationClickHandler(it)
+                            })
+                }
+
+            }
+
+
+        }
+        Spacer(modifier = Modifier.height(10.dp))
     }
 
 }

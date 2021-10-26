@@ -1,3 +1,11 @@
 <resources>
     <string name="title_activity_test">Test</string>
+    <string name="add_new_group">Add New Folder</string>
+    <string name="choose_emoji">Choose  emoji(Optional)</string>
+    <string name="choose_color">Choose  Color (Optional)</string>
+    <string name="add_new_group_tasks">Add New Group of Task</string>
+    <string name="dialog_title">Title</string>
+    <string name="dialog_x">X</string>
+    <string name="save">Save</string>
+
 </resources>

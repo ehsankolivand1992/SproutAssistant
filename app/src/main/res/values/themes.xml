@@ -6,6 +6,7 @@
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
         <item name="fontFamily">@font/gill_sens_fonts</item>
+        <item name="popupTheme">@color/teal_200</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -13,6 +14,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+
 
     <style name="Theme.SproutAssistant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

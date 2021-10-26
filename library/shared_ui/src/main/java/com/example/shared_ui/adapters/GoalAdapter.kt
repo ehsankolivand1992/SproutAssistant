@@ -3,14 +3,14 @@ package com.example.shared_ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ehsankolivand.todo_datasource.entity.GoalEntity
+import com.ehsankolivand.todo_datasource.entity.BaseTodoEntity
 import com.example.shared_ui.databinding.RvItemGoalBinding
 
 class GoalAdapter: RecyclerView.Adapter<GoalAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: RvItemGoalBinding)
         : RecyclerView.ViewHolder(binding.root)
-    lateinit var dataList: List<GoalEntity>
-    fun setData(data:List<GoalEntity>)
+    private lateinit var dataList: List<BaseTodoEntity>
+    fun setData(data:List<BaseTodoEntity>)
     {
         dataList = data
     }
